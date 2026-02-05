@@ -32,6 +32,7 @@ border:none;
 font-size: 15px;
 background: #DAE5F5;
 cursor:pointer;
+margin-bottom: 20px;
 }
 
 .weather-app-button {
@@ -45,9 +46,17 @@ cursor:pointer;
 }
 
 .weather-app-city {
-    font-size: 40px;
+    font-size: 45px;
     color:rgb(255, 255, 255);
-    padding-block: initial;
+    font-weight:bold;
+}
+
+.weather-app-date {
+    margin:0 auto;
+    font-weight: 600;
+    color:white;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 .weather-app-temperature {
@@ -55,9 +64,26 @@ cursor:pointer;
     font-size: 80px;
     font-weight:500;
     display: block;
+    color:white;
 }
 
-.weather-app-container {
+.weather-app-container{
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between ;
+    text-align: center;
+}
+
+.weather-app-humidity {
+     color:white;
+     font-size: 18px;
+}
+.weather-app-wind {
+     color:white;
+     font-size: 18px;
+}
+
+footer {
+text-align: center;
+color:black;
+font-size: 12px;
 }
