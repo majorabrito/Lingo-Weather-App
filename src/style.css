@@ -2,18 +2,26 @@ body {
  
   font-family: "Montserrat", sans-serif;
 
- background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);
+ background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
   height: 100vh;   
   margin: 0;
+
+}
+
+a{
+    color: #ffffff ;
 }
 
 .weather-app {
-    background-color: rgb(255, 255, 255);
+     background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     margin: 45px auto;
     width: 500px;
-      box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
       border-radius: 16px;
-  padding: 30px;
+  
 }
 
 .weather-app-search {
@@ -31,6 +39,19 @@ background: #DAE5F5;
 border:none;
 border-color: #AACDFE;
 font-size: 15px;
-background: #AACDFE
+background: #AACDFE;
 }
 
+.weather-app-city {
+    font-size: 40px;
+    color:rgb(255, 255, 255);
+    padding-bottom: 0%;
+}
+
+.weather-app-temperature {
+    text-align: center;
+    font-size: 80px;
+    font-weight:500;
+    display: block;
+    padding: 0 auto;
+}
