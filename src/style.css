@@ -31,6 +31,7 @@ border:none;
   width: 80%;
 font-size: 15px;
 background: #DAE5F5;
+cursor:pointer;
 }
 
 .weather-app-button {
@@ -40,12 +41,13 @@ border:none;
 border-color: #AACDFE;
 font-size: 15px;
 background: #AACDFE;
+cursor:pointer;
 }
 
 .weather-app-city {
     font-size: 40px;
     color:rgb(255, 255, 255);
-    padding-bottom: 0%;
+    padding-block: initial;
 }
 
 .weather-app-temperature {
@@ -53,5 +55,9 @@ background: #AACDFE;
     font-size: 80px;
     font-weight:500;
     display: block;
-    padding: 0 auto;
+}
+
+.weather-app-container {
+    display: flex;
+     justify-content: space-between;
 }
