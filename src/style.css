@@ -12,6 +12,7 @@ a{
     color: #ffffff ;
 }
 
+
 .weather-app {
      background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -45,17 +46,25 @@ background: #AACDFE;
 cursor:pointer;
 }
 
+.weather-app-button:hover{
+      transition: all 200ms ease-in-out;
+  opacity: 0.9;
+  background-color:#DAE5F5;
+
+}
+
 .weather-app-city {
-    font-size: 45px;
+    font-size: 30px;
     color:rgb(255, 255, 255);
     font-weight:bold;
+    
 }
 
 .weather-app-date {
     margin:0 auto;
     font-weight: 600;
-    color:white;
-    font-size: 20px;
+    color:rgb(223, 221, 221);
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
@@ -63,8 +72,22 @@ cursor:pointer;
     text-align: center;
     font-size: 80px;
     font-weight:500;
-    display: block;
+    display: flex;
     color:white;
+    justify-content: center;
+}
+
+.weather-app-number{
+     font-size:110px;
+}
+
+.weather-app-icon {
+     font-size:50px;
+}
+
+.weather-app-celcius {
+    font-size: 40px;
+    margin-top: 17px;
 }
 
 .weather-app-container{
@@ -74,16 +97,17 @@ cursor:pointer;
 }
 
 .weather-app-humidity {
-     color:white;
-     font-size: 18px;
+     color:rgb(255, 255, 255);
+     font-size: 17px;
 }
 .weather-app-wind {
-     color:white;
-     font-size: 18px;
+     color:rgb(255, 255, 255);
+     font-size: 17px;
 }
 
 footer {
 text-align: center;
 color:black;
 font-size: 12px;
+font-weight:400;
 }
