@@ -14,8 +14,12 @@
 <body>
    <div class="weather-app">
     <header>
-        <form>
-<input class= "weather-app-search" type="search" placeholder="Enter a city..." required/>
+        <form id="search-form">
+<input id="search-form-input" 
+class= "weather-app-search" 
+type="search" 
+placeholder="Enter a city..." 
+required/>
 <input class= "weather-app-button" type="submit" value="Search"/>
  </form>
    </header> 
@@ -23,7 +27,7 @@
         <div>
             <hr>
         
-    <span class="weather-app-city">Caracas</span>
+    <span id="city" class="weather-app-city">Caracas</span>
         <p class="weather-app-date">Tuesday 14:49, sunny</p> 
       
     <div class="weather-app-temperature">
