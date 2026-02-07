@@ -5,12 +5,15 @@ let humidityElement = document.querySelector("#Humidity");
 let humidity = response.data.main.humidity;
 let windElement = document.querySelector("#Wind");
 let wind = response.data.wind.speed;
+let descriptionElement = document.querySelector("#description");
+let description = response.data.weather[0].description;
+descriptionElement.innerHTML = description;
 windElement.innerHTML = `${wind}km/h`;
 humidityElement.innerHTML= `${humidity}%`;
 city.innerHTML= response.data.name;
     temperatureElement.innerHTML = temperature;
 
-    console.log(wind);
+    console.log(response.data);
 }
 function searchData(city){
     let apiKey="6b6a2d3686b7a15a7b03d3319d1627b9"
@@ -27,3 +30,6 @@ searchData(searchElement.value);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchFormCity);
+
+
+searchData("Malaga");
