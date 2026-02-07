@@ -5,18 +5,24 @@ function displayTemperature(response){
     let windElement = document.querySelector("#Wind");
     let descriptionElement = document.querySelector("#description");
     let dateElement = document.querySelector(".weather-app-date");
+    let iconElement = document.querySelector("#icon");
 
     let temperature = Math.round(response.data.main.temp);
     let humidity = response.data.main.humidity;
     let wind = response.data.wind.speed;
     let description = response.data.weather[0].description;
+    let icon = response.data.weather[0].icon;
+
     cityElement.innerHTML = response.data.name; 
     temperatureElement.innerHTML = temperature;
     humidityElement.innerHTML = `${humidity}%`;
     windElement.innerHTML = `${wind}km/h`;
     descriptionElement.innerHTML = `, ${description}`;
+    iconElement.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-app-icon" />`;
     
     dateElement.innerHTML = displayDateAndHour(response.data.dt);
+
+    console.log(response.data);
 }
 
 function displayDateAndHour(timestamp) {

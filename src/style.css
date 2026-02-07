@@ -92,6 +92,8 @@ cursor:pointer;
 
 .weather-app-icon {
      font-size:50px;
+     width: 77px;
+     height: 77px;
 }
 
 .weather-app-celcius {
