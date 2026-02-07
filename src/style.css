@@ -68,6 +68,15 @@ cursor:pointer;
     margin-bottom: 15px;
 }
 
+.weather-app-description {
+    margin:0 auto;
+    font-weight: 600;
+    color:rgb(223, 221, 221);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
 .weather-app-temperature {
     text-align: center;
     font-size: 80px;

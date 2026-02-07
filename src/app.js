@@ -1,23 +1,22 @@
 function displayTemperature(response){
-    let temperatureElement = document.querySelector("#temperature");
-let temperature = Math.round(response.data.main.temp);
-let cityElement = document.querySelector("#city");
-let humidityElement = document.querySelector("#Humidity");
-let humidity = response.data.main.humidity;
-let windElement = document.querySelector("#Wind");
-let wind = response.data.wind.speed;
-let descriptionElement = document.querySelector("#description");
-let description = response.data.weather[0].description;
-let dateElement = document.querySelector(".weather-app-date");
-windElement.innerHTML = `${wind}km/h`;
-humidityElement.innerHTML= `${humidity}%`;
-cityElement.innerHTML= response.data.name;
-temperatureElement.innerHTML = temperature;
-descriptionElement.innerHTML = `, ${description}`;
+   let temperatureElement = document.querySelector("#temperature");
+    let cityElement = document.querySelector("#city");
+    let humidityElement = document.querySelector("#Humidity");
+    let windElement = document.querySelector("#Wind");
+    let descriptionElement = document.querySelector("#description");
+    let dateElement = document.querySelector(".weather-app-date");
 
-dateElement.innerHTML = displayDateAndHour(response.data.dt);
-
-console.log(response.data);
+    let temperature = Math.round(response.data.main.temp);
+    let humidity = response.data.main.humidity;
+    let wind = response.data.wind.speed;
+    let description = response.data.weather[0].description;
+    cityElement.innerHTML = response.data.name; 
+    temperatureElement.innerHTML = temperature;
+    humidityElement.innerHTML = `${humidity}%`;
+    windElement.innerHTML = `${wind}km/h`;
+    descriptionElement.innerHTML = `, ${description}`;
+    
+    dateElement.innerHTML = displayDateAndHour(response.data.dt);
 }
 
 function displayDateAndHour(timestamp) {
@@ -43,8 +42,6 @@ return `${day} ${hours}:${minutes}`;
 
 
 }
-
-
 
 function searchData(city){
     let apiKey="6b6a2d3686b7a15a7b03d3319d1627b9"
