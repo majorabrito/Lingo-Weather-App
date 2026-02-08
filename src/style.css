@@ -39,8 +39,8 @@ margin-bottom: 20px;
 .weather-app-button {
     padding: 15px 20px;
  border-radius: 16px;
-border:none;
-border-color: #AACDFE;
+border-color: white;
+border-style: double;
 font-size: 15px;
 background: #AACDFE;
 cursor:pointer;
@@ -49,12 +49,13 @@ cursor:pointer;
 .weather-app-button:hover{
       transition: all 200ms ease-in-out;
   opacity: 0.9;
-  background-color:#DAE5F5;
-
+  background-color:white;
+  border-color: #CFE5F4;
+  border-style: double;
 }
 
 .weather-app-city {
-    font-size: 30px;
+    font-size: 27px;
     color:rgb(255, 255, 255);
     font-weight:bold;
     
@@ -64,7 +65,7 @@ cursor:pointer;
     margin:0 auto;
     font-weight: 600;
     color:rgb(223, 221, 221);
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 15px;
 }
 
@@ -103,17 +104,19 @@ cursor:pointer;
 
 .weather-app-container{
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-around ;
     text-align: center;
 }
 
 .weather-app-humidity {
      color:rgb(255, 255, 255);
      font-size: 17px;
+     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 .weather-app-wind {
      color:rgb(255, 255, 255);
      font-size: 17px;
+     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -121,4 +124,8 @@ text-align: center;
 color:black;
 font-size: 12px;
 font-weight:400;
+}
+
+.server{
+     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
