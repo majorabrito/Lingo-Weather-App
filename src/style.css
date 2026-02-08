@@ -108,6 +108,11 @@ cursor:pointer;
     text-align: center;
 }
 
+.weather-app-container-icons{
+    display: flex;
+    justify-content: space-around ;
+}
+
 .weather-app-humidity {
      color:rgb(255, 255, 255);
      font-size: 17px;
