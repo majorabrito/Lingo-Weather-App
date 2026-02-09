@@ -49,6 +49,25 @@ return `${day} ${hours}:${minutes}`;
 
 }
 
+function displayForecast() {
+     let days = ["Tue", "Wen", "Thur", "Fri", "Sat"];
+    let forecastHtml = "";
+
+    days.forEach(function (day)
+
+{ forecastHtml = forecastHtml + `
+    <div class="weather-app-forecast-day-container">
+    <div class="weather-app-forecast-date">${day}</div>
+    <div class="weather-app-forecast-icon">🌤</div>
+    <div class="weather-app-forecast-temperatures-container">
+    <div class="weather-app-forecast-temperature"><strong>14°</strong> 9°</div>
+    </div>
+    </div>` 
+});
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHtml;
+}
+
 function searchData(city){
     let apiKey="6b6a2d3686b7a15a7b03d3319d1627b9"
     let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
@@ -67,3 +86,4 @@ searchForm.addEventListener("submit", searchFormCity);
 
 
 searchData("Malaga");
+displayForecast();
