@@ -2,7 +2,7 @@ body {
  
   font-family: "Montserrat", sans-serif;
 
- background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
+ background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(26, 238, 231) 78.4%);
   height: 100vh;   
   margin: 0;
 
@@ -122,6 +122,37 @@ cursor:pointer;
      color:rgb(255, 255, 255);
      font-size: 17px;
      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.weather-app-forecast {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather-app-forecast-date {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+     font-size: 15px;
+     color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.weather-app-forecast-icon{
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+       color: white;
+
+}
+
+.weather-app-forecast-temperature{
+ text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+
 }
 
 footer {
