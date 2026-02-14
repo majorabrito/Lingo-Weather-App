@@ -47,6 +47,13 @@ if (minutes < 10) {
 return `${day} ${hours}:${minutes}`;
 }
 
+function formatDayForecast(timestamp){
+    let date = new Date (timestamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+    return days [date.getDay()];
+}
+
 function getForecast(city){
     let apiKey = "6b6a2d3686b7a15a7b03d3319d1627b9";
     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
@@ -54,19 +61,27 @@ function getForecast(city){
 }
 
 function displayForecast(response) {
-     let days = ["Tue", "Wen", "Thur", "Fri", "Sat"];
+    console.log(response.data);
+   
+        
     let forecastHtml = "";
 
-    days.forEach(function (day)
+    response.data.list.forEach(function (day, index){
+         if (index < 5) {
 
-{ forecastHtml = forecastHtml + `
+{ forecastHtml = 
+    forecastHtml + `
     <div class="weather-app-forecast-day-container">
-    <div class="weather-app-forecast-date">${day}</div>
-    <div class="weather-app-forecast-icon">🌤</div>
+    <div class="weather-app-forecast-date">${formatDayForecast(day.dt)}</div>
+<img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" class="weather-app-forecast-icon" />
     <div class="weather-app-forecast-temperatures-container">
-    <div class="weather-app-forecast-temperature"><strong>14°</strong> 9°</div>
+    <div class="weather-app-forecast-temperature">
+    <strong>${Math.round(day.main.temp_max)}</strong>º</div>
+     <div class="weather-forecast-temperature">${Math.round(day.main.temp_min)}º</div>
     </div>
     </div>` 
+    }}
+
 });
 let forecastElement = document.querySelector("#forecast");
 forecastElement.innerHTML = forecastHtml;
