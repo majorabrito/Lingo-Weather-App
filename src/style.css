@@ -4,8 +4,7 @@ body {
 
  background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(26, 238, 231) 78.4%);
   height: 100vh;   
-  margin: 0;
-
+  margin-bottom: 50px;
 }
 
 a{
@@ -143,10 +142,16 @@ cursor:pointer;
 
 .weather-app-forecast-icon{
     text-align: center;
-    font-size: 26px;
+    width: 66px;
+    height: 66px;
     margin-bottom: 10px;
        color: white;
 
+}
+
+.weather-app-forecast-temperatures-container{
+    display: flex;
+    justify-content: space-evenly; 
 }
 
 .weather-app-forecast-temperature{
@@ -156,7 +161,6 @@ cursor:pointer;
     justify-content: center;
          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
          margin-bottom: 20px;
-
 }
 
 footer {
