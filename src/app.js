@@ -22,7 +22,7 @@ function displayTemperature(response){
     
     dateElement.innerHTML = displayDateAndHour(response.data.dt);
 
-    console.log(response.data);
+    getForecast(response.data.name);
 }
 
 function displayDateAndHour(timestamp) {
@@ -45,11 +45,15 @@ if (minutes < 10) {
 };
 
 return `${day} ${hours}:${minutes}`;
-
-
 }
 
-function displayForecast() {
+function getForecast(city){
+    let apiKey = "6b6a2d3686b7a15a7b03d3319d1627b9";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
+     axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
      let days = ["Tue", "Wen", "Thur", "Fri", "Sat"];
     let forecastHtml = "";
 
@@ -86,4 +90,3 @@ searchForm.addEventListener("submit", searchFormCity);
 
 
 searchData("Malaga");
-displayForecast();
